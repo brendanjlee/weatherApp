@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <link rel="icon" href="./assets/favicon.png">
+  <link rel="stylesheet" href="styles2.css">
+  <title>WeatherIO</title>
+</head>
+<body>
+  <div class="header">
+    <p class="appTitle">WEATHER APP</p>
+    <div class="searchContainer">
+      <form action="" id="locationForm">
+        <button type="submit" id="formSubmitBtn"></button>
+        <input type="text" id="locationInput" class="formControl" placeholder="Search for a city..." required>
+      </form>
+      <div class="unitBtnContainer">
+        <button class="unitBtn activeBtn" id='celciusBtn'>°C</button>
+        <button class="unitBtn" id="fahrenBtn">°F</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <!-- generated -->
+    <div class="locationContainer">
+      <p class="currentCity"></p>
+      <p class="currentCountry"></p>
+    </div>
+
+    <div class="forecastContainer">
+      <div class="todayContainer">
+        <p class="weatherTitle">Today's Forecast</p>
+        <div class="currentWeatherContainer">
+            <p class="bigTemp" id="currentTempText"></p>
+            <div class="bigIconContainer">
+              <div id="currentConditionText"></div>
+              <img id="currentConditionIcon" src="./assets/sunny.webp" alt="condition-icon">
+            </div>
+        </div>
+        <div class="hourlyForecastContainer"></div>
+      </div>
+      <div class="futureContainer">
+        <p class="weatherTitle">2-Day Forecast</p>
+        <div class="futureCardContainer"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
